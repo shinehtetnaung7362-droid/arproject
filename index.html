@@ -3,27 +3,34 @@
 <head>
 <meta charset="utf-8">
 
-<script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
-<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+<!-- A-Frame stable -->
+<script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+
+<!-- AR.js stable CDN -->
+<script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js/aframe/build/aframe-ar.js"></script>
+
 </head>
 
 <body style="margin:0; overflow:hidden;">
 
-<a-scene embedded arjs>
+<a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false;">
 
-<a-marker preset="hiro">
+    <!-- MARKER -->
+    <a-marker preset="hiro">
 
-<a-image
-src="assets/leopard.png"
-position="0 0.5 0"
-rotation="-90 0 0"
-width="2"
-height="2">
-</a-image>
+        <!-- IMAGE -->
+        <a-image
+            src="assets/leopard.png"
+            position="0 0.5 0"
+            rotation="-90 0 0"
+            width="2"
+            height="2">
+        </a-image>
 
-</a-marker>
+    </a-marker>
 
-<a-entity camera></a-entity>
+    <!-- CAMERA -->
+    <a-entity camera></a-entity>
 
 </a-scene>
 
